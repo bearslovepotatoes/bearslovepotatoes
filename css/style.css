@@ -6,6 +6,7 @@ body {
 }
 
 #menu {
+/*    background-color: #868DC5;*/
     background-color: #3F3831;
     bottom: 0 !important;
     position: fixed;
