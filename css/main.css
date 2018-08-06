@@ -1109,6 +1109,7 @@ a.menu-toggle {
 		text-align: left;
 		border-bottom: 1px dotted rgba(200, 200, 200, 0.08);
 		padding: 0;
+        
 	}
 	.main-navigation > li:first-child {
 		border-top: 1px dotted rgba(200, 200, 200, 0.08);
@@ -1119,10 +1120,12 @@ a.menu-toggle {
 		width: auto;
 		padding: 18px 0;
 		line-height: 16px;
+        font-size: 1.5em;
 		border: none;
+        text-align: center;
 	}
 	.main-navigation li a:hover {
-		color: #ff7b29;
+		color: #F49090;
 	}
 	.main-navigation li.with-sep a {
 		padding-left: 0;
@@ -1533,6 +1536,19 @@ a.menu-toggle {
 	margin-bottom: .3rem;
 }
 
+.process-content .button {
+    background:#F49090;
+	color: #fff;
+	padding: 0 5rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.process-content .button:hover,
+.process-content .button:focus {
+	background: #58687b;
+	color: #FFFFFF;
+}
+
 /**
  * responsive:
  * process
@@ -1745,7 +1761,7 @@ a.menu-toggle {
 	line-height: 1.8rem;
 }
 .pricing-content .price-block .button {
-    background:#CEE4F2;
+    background:#F49090;
 	color: #fff;
 	padding: 0 5rem;
 	margin-left: auto;
@@ -2305,6 +2321,7 @@ footer p{
 	padding-top: 6.6rem;
 	padding-bottom: 4.2rem;
 	background: #F49090;
+    text-align: center;
 }
 .footer-main ul {
 	font-size: 1.5rem;
@@ -2320,11 +2337,12 @@ footer p{
 	color: #FFFFFF;
 }
 .footer-main .footer-logo {
-	width: 162px;
-	height: 70px;
-	background: url("../images/2018Logo.png") no-repeat center;
-	background-size: 162px 70px;
-	margin: -.6rem 0 2.1rem -.3rem;
+	width: 150px;
+	height: 150px;
+	background: url("../images/sleepingbear.gif") no-repeat center;
+	background-size: 150px 150px;
+	margin-left:auto;
+    margin-right:auto;
 	display: block;
 }
 .footer-main .footer-subscribe p {

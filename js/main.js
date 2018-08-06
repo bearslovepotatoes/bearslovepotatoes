@@ -124,20 +124,21 @@
 	/*----------------------------------------------------*/
   	/* Smooth Scrolling
   	------------------------------------------------------*/
-  	$('.smoothscroll').on('click', function (e) {
-	 	
-	 	e.preventDefault();
-
-   	var target = this.hash,
-    	$target = $(target);
-
-    	$('html, body').stop().animate({
-       	'scrollTop': $target.offset().top
-      }, 800, 'swing', function () {
-      	window.location.hash = target;
-      });
-
-  	});  
+    
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
   
 
    /*----------------------------------------------------*/
@@ -152,7 +153,7 @@
 	------------------------------------------------------ */
 
 	// Example MailChimp url: http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
-	var mailChimpURL = 'http://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e65110b38d'
+	var mailChimpURL = ''
 
 	$('#mc-form').ajaxChimp({
 
@@ -234,6 +235,9 @@
 
 })(jQuery);
 
+ 	/*----------------------------------------------------- */
+  	/* Make it rain Confetti!
+   ------------------------------------------------------- */ 
 var confettiSettings = { target: 'confetti' };
 var confetti = new ConfettiGenerator(confettiSettings);
 confetti.render();
